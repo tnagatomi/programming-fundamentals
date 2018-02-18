@@ -1,7 +1,7 @@
 (* 目的：受け取った時間 t が午前か午後かを返す *)
 (*  : int -> string *)
 let jikan t =
-  "午前"
+  if t < 12 then "午前" else "午後"
 
 (* テスト *)
 let test1 = jikan 0 = "午前"
