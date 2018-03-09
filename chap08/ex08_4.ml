@@ -12,3 +12,10 @@ type person_t = {
 (* ketsueki_hyoji : person_t -> string *)
 let ketsueki_hyoji person =
   ""
+
+let test1 = ketsueki_hyoji {name="John"; height=182.0; weight=75.0; birth_month=1; birth_day=1; blood_type="A"}
+              = "Johnさんの血液型はA型です"
+let test1 = ketsueki_hyoji {name="Steve"; height=185.0; weight=73.0; birth_month=2; birth_day=3; blood_type="B"}
+              = "Steveさんの血液型はB型です"
+let test1 = ketsueki_hyoji {name="Bill"; height=179.0; weight=69.0; birth_month=4; birth_day=15; blood_type="O"}
+              = "Billさんの血液型はO型です"
