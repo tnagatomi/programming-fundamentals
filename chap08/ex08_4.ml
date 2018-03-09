@@ -10,8 +10,9 @@ type person_t = {
 
 (* 目的：人のデータ person を受け取り「○○さんの血液型は△△型です」を返す *)
 (* ketsueki_hyoji : person_t -> string *)
-let ketsueki_hyoji person =
-  ""
+let ketsueki_hyoji person = match person with
+  {name = n; height = h; weight = w; birth_month = bm; birth_day = bd; blood_type = bt} ->
+    ""
 
 let test1 = ketsueki_hyoji {name="John"; height=182.0; weight=75.0; birth_month=1; birth_day=1; blood_type="A"}
               = "Johnさんの血液型はA型です"
