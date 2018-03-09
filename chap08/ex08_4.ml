@@ -8,3 +8,7 @@ type person_t = {
   blood_type : string;  (* 血液型 *)
 }
 
+(* 目的：人のデータ person を受け取り「○○さんの血液型は△△型です」を返す *)
+(* ketsueki_hyoji : person_t -> string *)
+let ketsueki_hyoji person =
+  ""
