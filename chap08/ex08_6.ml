@@ -7,7 +7,8 @@ let ekimei3 = {kanji="大手町"; kana="おおてまち"; romaji="otemachi"; sho
 (* 目的：ekimei_t 型のデータを受け取り「路線名, 駅名（かな）」の形式の文字列を返す *)
 (* hyoji : ekimei_t -> string *)
 let hyoji ekimei = match ekimei with
-  {kanji = kj; kana = kn; romaji = r; shozoku = s} -> ""
+  {kanji = kj; kana = kn; romaji = r; shozoku = s} ->
+    s ^ "、" ^ kj ^ "（" ^ kn ^ "）"
 
 (* テスト *)
 let test1 = hyoji ekimei1 = "地下鉄空港線, 赤坂駅（あかさかえき）"
