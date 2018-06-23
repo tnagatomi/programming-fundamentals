@@ -9,7 +9,11 @@ let lst5 = [person2; person1; person1]
 
 (* 目的：血液型がA型の人の数を返す *)
 (* count_ketsueki_A : person_t list -> int *)
-let count_ketsueki_A lst = 0
+let rec count_ketsueki_A lst = match lst with
+    [] -> 0
+  | { name = n; shincho = s; taiju = tj; tsuki = tk; hi = h; ketsueki = k } :: rest ->
+      if k = "A" then 1 + count_ketsueki_A rest
+                 else count_ketsueki_A rest
 
 (* テスト *)
 let test1 = count_ketsueki_A lst1 = 0
