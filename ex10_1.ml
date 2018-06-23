@@ -1,6 +1,9 @@
 (* 目的：整数をあらかじめ照準に並んでいるリストの昇順となる位置に挿入したリストを返す *)
 (* insert: int list -> int -> int list *)
-let insert lst n = []
+let rec insert lst n = match lst with
+    [] -> [n]
+  | first :: rest -> if n < first then n :: first :: rest
+                                  else first :: insert rest n
 
 (* テスト *)
 let test1 = insert [] 1 = [1]
