@@ -6,7 +6,9 @@
 
 (* 目的：受け取ったリスト lst の長さを返す *)
 (* length : int lst -> int *)
-let length lst = 0
+let rec length lst = match lst with
+    [] -> 0
+  | first :: rest -> 1 + length rest
 
 (* テスト *)
 let test1 = length [] = 0
