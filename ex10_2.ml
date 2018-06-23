@@ -1,6 +1,10 @@
+#use "ex10_1.ml"
+
 (* 目的：整数のリストを昇順にして返す *)
 (* ins_sort: int list -> int list *)
-let ins_sort lst = []
+let rec ins_sort lst = match lst with
+    [] -> []
+    | first :: rest -> insert (ins_sort rest) first
 
 (* テスト *)
 let test1 = ins_sort [] = []
