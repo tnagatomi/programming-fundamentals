@@ -2,8 +2,8 @@
 (* insert: int list -> int -> int list *)
 let rec insert lst n = match lst with
     [] -> [n]
-  | first :: rest -> if n < first then n :: first :: rest
-                                  else first :: insert rest n
+  | first :: rest -> if n > first then first :: insert rest n
+                                  else n :: lst
 
 (* テスト *)
 let test1 = insert [] 1 = [1]
