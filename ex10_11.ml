@@ -10,6 +10,6 @@ let rec ekikan_kyori eki1 eki2 ekikan_list = match ekikan_list with
       else ekikan_kyori eki1 eki2 rest
 
 (* テスト *)
-let test = ekikan_kyori "茗荷谷" "新大塚" global_ekikan_list = 1.2
-let test = ekikan_kyori "新大塚" "茗荷谷" global_ekikan_list = 1.2
-let test = ekikan_kyori "池袋" "平和台" global_ekikan_list = infinity
+let test1 = ekikan_kyori "茗荷谷" "新大塚" global_ekikan_list = 1.2
+let test2 = ekikan_kyori "新大塚" "茗荷谷" global_ekikan_list = 1.2
+let test3 = ekikan_kyori "池袋" "平和台" global_ekikan_list = infinity
